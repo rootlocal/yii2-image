@@ -7,20 +7,27 @@
     "extension",
     "image"
   ],
+  "homepage": "http://rootlocal.ru",
   "license": "Apache-2.0",
   "authors": [
     {
       "name": "Alexander Zakharov",
-      "email": "sys@eml.ru"
+      "email": "sys@eml.ru",
+      "role": "Developer"
     }
   ],
   "require": {
-    "php": ">=5.4.0",
-    "yiisoft/yii2": "~2.0.0"
+    "php": ">=5.6.0",
+    "yiisoft/yii2": "~2.0.14"
   },
   "require-dev": {
     "yiisoft/yii2-codeception": "~2.0",
-    "codeclimate/php-test-reporter": "^0.4.4"
+    "codeclimate/php-test-reporter": "^0.4.4",
+    "codeception/base": "^2.4.0",
+    "phpunit/phpunit": "~6.5.14",
+    "codeception/verify": "~1.0.0",
+    "symfony/browser-kit": ">=2.7 <=4.2.4",
+    "emagister/selenium-server": "^2.52"
   },
   "autoload": {
     "psr-4": {
