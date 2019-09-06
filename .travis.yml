@@ -21,12 +21,14 @@ install:
   - echo "pwd: `pwd`"
   - travis_retry composer self-update && composer --version
   - travis_retry composer global require "fxp/composer-asset-plugin:~1.4"
+  - travis_retry composer global require "codeception/base:^2.4.0"
+  - travis_retry composer global require "phpunit/phpunit:~6.5.14"
   - export PATH="`pwd`/vendor/bin:$PATH"
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
   - travis_retry composer install --dev --prefer-dist --no-interaction
   - |
     cd tests
-    codecept build
+    ../vendor/bin/codecept build
     cd ..
 
 before_script:
